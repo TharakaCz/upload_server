@@ -61,7 +61,7 @@ public class VideoServiceImpl implements VideoService {
   public String delete(Long pid) throws Exception {
 
     VideoUploard videoUploard = videoRepository.findById(pid).get();
-    String Path = videoUploard.getvPath();
+    String Path = "."+videoUploard.getvPath();
     File file = new File(Path);
 
      if (file.delete()){
